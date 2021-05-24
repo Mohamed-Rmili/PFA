@@ -33,7 +33,7 @@
                                         <td *ngIf= 'driver.role=="driver"'>{{driver.CIN}}</td>
                                         <td *ngIf= 'driver.role=="driver"'>{{driver.name}}</td>
                                         <td *ngIf= 'driver.role=="driver"'>{{driver.prenom}}</td>
-                                        <td *ngIf= 'driver.role=="driver"'><a (click)="show(driver).cin" class="btn btn-danger btn-round">Check</a></td>
+                                        <td *ngIf= 'driver.role=="driver"'><a (click)="show(driver).cin" class="btn btn-danger btn-round">Check</a><a (click)="delete(driver).id" class="btn btn-dark btn-round">Delete</a></td>
                                     </tr>
                                 </tbody>
                             </table>

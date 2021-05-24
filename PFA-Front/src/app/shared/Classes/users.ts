@@ -13,5 +13,4 @@ export class Users {
     sex: string;
     dateNais: Date;
     role: string;
-    token: any;
 }

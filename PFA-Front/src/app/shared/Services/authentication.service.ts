@@ -21,7 +21,6 @@ export class AuthenticationService {
     public get currentUserValue(): Users {
         return this.currentUserSubject.value;
     }
-
     login(data) {
         console.log(data);
         return this.http.post<any>(`${environment.apiUrl}/api/login`, data)
@@ -31,6 +30,7 @@ export class AuthenticationService {
                 this.currentUserSubject.next(user);
                 console.log('currentUser',user); 
                 localStorage.setItem('isloggedin','true');
+                // user = JSON.parse(localStorage.getItem('currentUsers'));
                 return user;
             }));
     }
@@ -40,6 +40,8 @@ export class AuthenticationService {
         localStorage.removeItem('currentUser');
         localStorage.setItem('isloggedin','false');
         this.currentUserSubject.next(null);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/login']);
     }
+    //3andek postman
+    //yess
 }

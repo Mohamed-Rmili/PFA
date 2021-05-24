@@ -12,11 +12,12 @@ import { DriverdashComponent } from './Driver/driverdash/driverdash.component';
 import { AdmindashComponent } from './Admin/admindash/admindash.component';
 import { UserProfileComponent } from './Auth/user-profile/user-profile.component';
 import { MapsComponent } from './Driver/maps/maps.component';
+import { CarsListComponent } from './Admin/cars-list/cars-list.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   }, {
     path: '', 
@@ -28,7 +29,8 @@ const routes: Routes =[
       {path: 'driver-dash', component:DriverdashComponent},
       {path: 'admin-dash', component:AdmindashComponent},
       {path: 'user-profile', component:UserProfileComponent},
-      {path: 'map', component:MapsComponent}
+      {path: 'map', component:MapsComponent},
+      {path: 'cars-list', component:CarsListComponent}
     ]
   },
   {path: 'login', component:LoginComponent},

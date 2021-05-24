@@ -32,4 +32,7 @@ export class DriversListComponent implements OnInit {
     this.router.navigate(['/trips-list']);
   }
 
+  delete(id){
+    
+  }
 }

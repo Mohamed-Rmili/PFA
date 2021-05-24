@@ -22,6 +22,10 @@ import { TripsListComponent } from './Driver/trips-list/trips-list.component';
 import { DriversListComponent } from './Admin/drivers-list/drivers-list.component';
 import { DriverdashComponent } from './Driver/driverdash/driverdash.component';
 import { AdmindashComponent } from './Admin/admindash/admindash.component';
+import { CarsListComponent } from './Admin/cars-list/cars-list.component';
+import { AuthService } from './shared/Services/auth.service';
+import { JarwisService } from './shared/Services/jarwis.service';
+import { TokenService } from './shared/Services/token.service';
 
 @NgModule({
   imports: [
@@ -45,9 +49,10 @@ import { AdmindashComponent } from './Admin/admindash/admindash.component';
     DriversListComponent,
     DriverdashComponent,
     AdmindashComponent,
+    CarsListComponent,
 
   ],
-  providers: [],
+  providers: [JarwisService,TokenService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

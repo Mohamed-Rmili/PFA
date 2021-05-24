@@ -10,14 +10,14 @@ import { DriverService } from 'app/shared/Services/driver.service';
 export class UserProfileComponent implements OnInit {
   user: any;
   editProfile: FormGroup;
-
+//monsieur l partie hedhi khalitha, khater mazelt 3endi faza na9sa fl sidebar ken tetdhakar, maw kol role 3enda sidebar tokhrojla
   constructor(private fb : FormBuilder, private userservice : DriverService) { }
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
     console.log(this.user);
     this.editProfile = this.fb.group({
-      Lastname: [],
+      Lastname: [this.user.name],
       Firstname: [],
       Username:[],
       Email: [],
